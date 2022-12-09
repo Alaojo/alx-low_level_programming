@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc 2-assembler-o cisfun
+gcc -S $CFILE
