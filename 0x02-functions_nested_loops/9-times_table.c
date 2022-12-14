@@ -1,21 +1,30 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints all combination of single digits
- * Return: Always 0
+ * times_table - print the 9 times table
  */
-int main(void)
+void times_table(void)
 {
-	int n;
+	int num, mult, prod;
 
-	for (n = 48; n < 58; n++)
+	for (num = 0; num <= 9; num++)
 	{
-		putchar(n);
-		if (n != 57)
+		_putchar('0');
+
+		for (mult = 1; mult <= 9; mult++)
 		{
-			putchar(',');
-			putchar(' ');
+			_putchar(',');
+			_putchar(' ');
+
+			prod = num * mult;
+
+			if (prod <= 9)
+				_putchar(' ');
+			else
+				_putchar((prod / 10) + '0');
+
+			_putchar((prod % 10) + '0');
 		}
-	putchar('\n');
-	return (0);
+		_putchar('\n');
+	}
 }
