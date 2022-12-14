@@ -1,21 +1,22 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints the numbers in base 16
- * Return: Always 0
+ * jack_bauer - prints every minute of the day
  */
-int main(void)
+void jack_bauer(void)
 {
-	int num;
-	char la;
+	int hour, minute;
 
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-
-	for (la = 'a'; la <= 'f'; la++)
-		putchar(la);
-
-	putchar('\n');
-
-	return (0);
+	for (hour = 0; hour <= 23; hour++)
+	{
+		for (minute = 0; minute <= 59; minute++)
+		{
+			_putchar((hour / 10) + '0');
+			_putchar((hour % 10) + '0');
+			_putchar(':');
+			_putchar((minute / 10) + '0');
+			_putchar((minute % 10) + '0');
+			_putchar('\n');
+		}
+	}
 }
