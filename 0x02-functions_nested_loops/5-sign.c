@@ -1,17 +1,27 @@
 #include "main.h"
 
 /**
- * main - prints all strings from 0 to 9
- * Return: Always 0
+ * print_sign - prints the sign of a number
+ * @n: the number of the sign to be printed
+ * Return: 1 if number is greater than zero
+ * 0 of number is zero
+ * -1 if number is less than zero
  */
-int main(void)
+int print_sign(int n)
 {
-	int num;
-
-	for (num = 0; num < 10; num++)
-		printf("%d", num);
-
-	printf("\n");
-
-	return (0);
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n == 0)
+	{
+		_putchar ('0')
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
